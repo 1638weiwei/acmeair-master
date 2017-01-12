@@ -63,6 +63,13 @@ cs:
   environment:
     - LICENSE=accept
 
+cs1:
+  container_name: cs1
+  net: ${NETWORK}
+  build: ./acmeair-cs1/
+  environment:
+    - LICENSE=accept
+
 fs:
   container_name: fs
   net: ${NETWORK}

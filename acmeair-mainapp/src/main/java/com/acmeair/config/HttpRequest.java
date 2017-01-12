@@ -21,23 +21,23 @@ public class HttpRequest {
         BufferedReader in = null;
         try {
             URL realUrl = new URL(url+"?" + "sendtime=" + time);
-            // 打开和URL之间的连接
+            // 鎵撳紑鍜孶RL涔嬮棿鐨勮繛鎺�
             URLConnection connection = realUrl.openConnection();
-            // 设置通用的请求属性
+            // 璁剧疆閫氱敤鐨勮姹傚睘鎬�
             connection.setRequestProperty("Cookie","sessionid="+sessionId);
             connection.setRequestProperty("accept", "*/*");
             connection.setRequestProperty("connection", "Keep-Alive");
             connection.setRequestProperty("User-Agent",
                     "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36");
-            // 建立实际的连接
+            // 寤虹珛瀹為檯鐨勮繛鎺�
             connection.connect();
-            // 获取所有响应头字段
+            // 鑾峰彇鎵�鏈夊搷搴斿ご瀛楁
             Map<String, List<String>> map = connection.getHeaderFields();
-            // 遍历所有的响应头字段
+            // 閬嶅巻鎵�鏈夌殑鍝嶅簲澶村瓧娈�
             for (String key : map.keySet()) {
                 System.out.println(key + "--->" + map.get(key));
             }
-            // 定义 BufferedReader输入流来读取URL的响应
+            // 瀹氫箟 BufferedReader杈撳叆娴佹潵璇诲彇URL鐨勫搷搴�
             in = new BufferedReader(new InputStreamReader(
                     connection.getInputStream()));
             String line;
@@ -45,10 +45,10 @@ public class HttpRequest {
                 result += line;
             }
         } catch (Exception e) {
-            System.out.println("发送GET请求出现异常！" + e);
+            System.out.println("鍙戦�丟ET璇锋眰鍑虹幇寮傚父锛�" + e);
             e.printStackTrace();
         }
-        // 使用finally块来关闭输入流
+        // 浣跨敤finally鍧楁潵鍏抽棴杈撳叆娴�
         finally {
             try {
                 if (in != null) {

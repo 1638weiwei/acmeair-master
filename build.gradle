@@ -68,6 +68,16 @@ project(':acmeair-cs') {
         providedRuntime 'javax:javaee-web-api:7.0'
     }
 }
+project(':acmeair-cs1') {
+    apply plugin: 'war'
+
+    dependencies {
+        compile project(':acmeair-services')
+        compile project(':acmeair-services-mongo')
+        compile project(':acmeair-loader')
+        providedRuntime 'javax:javaee-web-api:7.0'
+    }
+}
 
 project(':acmeair-fs') {
     apply plugin: 'war'
