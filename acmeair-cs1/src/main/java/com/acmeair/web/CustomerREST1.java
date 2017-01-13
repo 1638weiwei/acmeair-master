@@ -41,6 +41,7 @@ sb.append(new String(arr, 0, len));
 
 System.out.println(sb.toString());
 		*/
+		System.out.println("ok");
 		return 0;
 	}
 	
