@@ -89,8 +89,8 @@ public class CustomerREST {
 //            conn.setDoOutput(true);
             connection.connect();
 //            
-//            OutputStream out = conn.getOutputStream();  //java.net.ProtocolException
-//            out.write("We are Chinese.".getBytes());
+            OutputStream out = connection.getOutputStream();  //java.net.ProtocolException
+            out.write("We are Chinese.".getBytes());
             // 鑾峰彇鎵�鏈夊搷搴斿ご瀛楁
             Map<String, List<String>> map = connection.getHeaderFields();
             // 閬嶅巻鎵�鏈夌殑鍝嶅簲澶村瓧娈�
@@ -119,7 +119,7 @@ public class CustomerREST {
             }
         }
 //       return result;
-//       CustomerREST1.test();
+       CustomerREST1.test(connection);
         
 		
 	}
