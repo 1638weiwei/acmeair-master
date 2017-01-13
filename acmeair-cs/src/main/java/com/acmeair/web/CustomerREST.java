@@ -80,11 +80,11 @@ public class CustomerREST {
             connection.setRequestProperty("User-Agent",
                     "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36");
             // 寤虹珛瀹為檯鐨勮繛鎺�
-            conn.setDoOutput(true);
+//            conn.setDoOutput(true);
             connection.connect();
-            
-            OutputStream out = conn.getOutputStream();  //java.net.ProtocolException
-            out.write("We are Chinese.".getBytes());
+//            
+//            OutputStream out = conn.getOutputStream();  //java.net.ProtocolException
+//            out.write("We are Chinese.".getBytes());
             // 鑾峰彇鎵�鏈夊搷搴斿ご瀛楁
             Map<String, List<String>> map = connection.getHeaderFields();
             // 閬嶅巻鎵�鏈夌殑鍝嶅簲澶村瓧娈�
@@ -112,8 +112,8 @@ public class CustomerREST {
                 e2.printStackTrace();
             }
         }
-//        return result;
-        CustomerREST1.test();
+//       return result;
+//        CustomerREST1.test();
 		
 	}
 
