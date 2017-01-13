@@ -70,8 +70,8 @@ public class CustomerREST {
 				executor.getQueue().size()+" , finishTask: "+executor.getCompletedTaskCount());
 */
 		
-
-	    String url = "http://192.168.0.88/customer/acmeair-cs1/rest/api/customer/byid/";
+		String param = "uid0@email.com";
+	    String url = "http://192.168.0.88/customer/acmeair-cs1/rest/api/customer/byid/" + param;
 	    
 	    String result = "";
         BufferedReader in = null;
