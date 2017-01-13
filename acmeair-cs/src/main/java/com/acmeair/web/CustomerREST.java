@@ -43,7 +43,7 @@ import java.io.IOException;
 import java.io.InputStream;  
 import java.io.OutputStream; 
 
-import com.acmeair.web.CustomerREST1;
+
 
 @Path("/customer")
 public class CustomerREST {
@@ -130,8 +130,6 @@ public class CustomerREST {
             }
         }
 //       return result;
-        CustomerREST1 cr1 = new CustomerREST1(); 
-        cr1.test(connection);
         
 		
 	}

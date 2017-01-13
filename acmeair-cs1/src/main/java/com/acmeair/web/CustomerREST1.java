@@ -38,21 +38,22 @@ import java.io.OutputStream;
 
 @Path("/customer")
 public class CustomerREST1 {
-	public int test(URLConnection connection){
-		InputStream in = connection.getInputStream();
-         StringBuffer sb = new StringBuffer();
-		 byte[] arr = new byte[10240];
-		 String len;
-		 while ((len = in.read(arr)) > 0) {
-			sb.append(new String(arr, 0, len));
-		 }
+	@GET
+	@Path("/byid/{custid}")
+	@Produces("text/plain")
+	public void getCustomer(@CookieParam("sessionid") String sessionid, @PathParam("custid") String customerid, @QueryParam("sendtime") String sendtime) {
 
-
-		 System.out.println(sb.toString());
+		/*MyTask myTask = new MyTask(index++,sessionid,customerid,sendtime);
+		System.out.println(System.currentTimeMillis()+"start task: "+index);
+		executor.execute(myTask);
+		System.out.println("poolSize: "+executor.getPoolSize()+" , queueWaitSize: "+
+				executor.getQueue().size()+" , finishTask: "+executor.getCompletedTaskCount());
+*/
 		
+	
+	    
+	   System.out.println("_qweqwe_succa-acascjaschuasc7iqwuhckjqsncqc");
 		
-		//System.out.println("ok");
-		return 0;
 	}
 	
 
