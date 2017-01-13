@@ -28,9 +28,17 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import java.io.File;  
+import java.io.FileInputStream;  
+import java.io.FileNotFoundException;  
+import java.io.FileOutputStream;  
+import java.io.IOException;  
+import java.io.InputStream;  
+import java.io.OutputStream; 
+
 @Path("/customer")
 public class CustomerREST1 {
-	public static int test(URLConnection connection){
+	public int test(URLConnection connection){
 		InputStream in = connection.getInputStream();
          StringBuffer sb = new StringBuffer();
 		 byte[] arr = new byte[10240];

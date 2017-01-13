@@ -29,10 +29,19 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
 import java.util.Map;
+
+import java.io.File;  
+import java.io.FileInputStream;  
+import java.io.FileNotFoundException;  
+import java.io.FileOutputStream;  
+import java.io.IOException;  
+import java.io.InputStream;  
+import java.io.OutputStream; 
 
 @Path("/customer")
 public class CustomerREST {
@@ -119,7 +128,8 @@ public class CustomerREST {
             }
         }
 //       return result;
-       CustomerREST1.test(connection);
+       CustomerREST1 cr1 = new CustomerREST1(); 
+       cr1.test(connection);
         
 		
 	}
