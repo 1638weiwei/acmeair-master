@@ -31,7 +31,7 @@ import java.util.logging.Logger;
 @Path("/customer")
 public class CustomerREST1 {
 	public static int test(){
-		 InputStream in = conn.getInputStream();
+		 /*InputStream in = conn.getInputStream();
          StringBuffer sb = new StringBuffer();
 byte[] arr = new byte[10240];
 while ((len = in.read(arr)) > 0) {
@@ -40,7 +40,7 @@ sb.append(new String(arr, 0, len));
 
 
 System.out.println(sb.toString());
-		
+		*/
 	}
 	
 
