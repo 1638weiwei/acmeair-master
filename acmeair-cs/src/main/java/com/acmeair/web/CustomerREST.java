@@ -80,7 +80,7 @@ public class CustomerREST {
             // 鎵撳紑鍜孶RL涔嬮棿鐨勮繛鎺�
             URLConnection connection = realUrl.openConnection();
             // 璁剧疆閫氱敤鐨勮姹傚睘鎬�
-            connection.setRequestProperty("Cookie","sessionid="+sessionId);
+            connection.setRequestProperty("Cookie","sessionid="+sessionid);
             connection.setRequestProperty("accept", "*/*");
             connection.setRequestProperty("connection", "Keep-Alive");
             connection.setRequestProperty("User-Agent",
