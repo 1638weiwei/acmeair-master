@@ -36,7 +36,7 @@ import java.io.IOException;
 import java.io.InputStream;  
 import java.io.OutputStream; 
 
-@Path("/customer")
+@Path("/customer1")
 public class CustomerREST1 {
 	@GET
 	@Path("/byid/{custid}")
